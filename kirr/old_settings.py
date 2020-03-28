@@ -61,8 +61,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'kirr.urls'
 ROOT_HOSTCONF = 'kirr.hosts'
 DEFAULT_HOST = "www"
-DEFAULT_REDIRECT_URL = "http://www.shred.com:8000" #kirr.co
-PARENT_HOST = "shred.com:8000"
+DEFAULT_REDIRECT_URL = "http://www.shred.com:5000" #minim.com
+PARENT_HOST = "shred.com:5000"
 
 TEMPLATES = [
     {

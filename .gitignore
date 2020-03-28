@@ -1,3 +1,5 @@
+kirr/settings/local.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -128,3 +130,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Staticfiles
+staticfiles
+
+.DS_Store
