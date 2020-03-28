@@ -20,5 +20,6 @@ class ClickEvent(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
 
     objects   = ClickEventManager()
+    
     def __str__(self):
         return "{i}".format(i=self.count)

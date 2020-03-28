@@ -25,7 +25,7 @@ SECRET_KEY = '2$^kkt3ez1l@xuaose^3xj4bk(9$6014is)+1ac9c*!io#ymt*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.tirr.com', 'tirr.com', 'www.kirr.co', 'kirr.co']
+ALLOWED_HOSTS = ['127.0.0.1', 'shred.com', 'www.shred.com', 'minim.com', 'www.minim.com']
 
 
 # Application definition
@@ -61,8 +61,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'kirr.urls'
 ROOT_HOSTCONF = 'kirr.hosts'
 DEFAULT_HOST = "www"
-DEFAULT_REDIRECT_URL = "http://www.tirr.com:8000" #kirr.co
-PARENT_HOST = "tirr.com"
+DEFAULT_REDIRECT_URL = "http://www.shred.com:8000" #kirr.co
+PARENT_HOST = "shred.com:8000"
 
 TEMPLATES = [
     {

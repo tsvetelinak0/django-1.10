@@ -5,10 +5,14 @@
 {% endblock title %}
 
 {% block content %}
-<div class=''>
-    <h1>Exists</h1>
+<div class='text-align-center'>
+    <h1>Already exists</h1>
     <p>{{ object.url }}</p>
-    {% if object.clickevent %}<p>Count: {{ object.clickevent.count }}</p>{% endif %}
+
+    {% if object.clickevent.count %}
+        <p>Count: {{ object.clickevent.count }}</p>
+    {% endif %}
+
     <p><a class='btn btn-link' href='{{ object.get_short_url }}'>{{ object.get_short_url }}</a></p>
     <a class='btn btn-default'  href='/'>+ New</a>
 </div>

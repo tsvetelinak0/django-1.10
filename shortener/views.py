@@ -19,7 +19,7 @@ class HomeView(View):
         the_form = SubmitUrlForm()
         bg_image = 'https://static.pexels.com/photos/88212/pexels-photo-88212.jpeg'
         context = {
-            "title": "Kirr.co",
+            "title": "minim.com",
             "form": the_form,
             "bg_image": bg_image
         }
@@ -28,7 +28,7 @@ class HomeView(View):
     def post(self, request, *args, **kwargs):
         form = SubmitUrlForm(request.POST)
         context = {
-            "title": "Kirr.co",
+            "title": "minim.com",
             "form": form
         }
         template = "shortener/home.html"
@@ -49,7 +49,7 @@ class HomeView(View):
 class URLRedirectView(View): #class based view CBV
     def get(self, request, shortcode=None, *args, **kwargs):
         qs = KirrURL.objects.filter(shortcode__iexact=shortcode)
-        if qs.count() != 1 and not q.exists():
+        if qs.count() != 1 and not qs.exists():
             raise Http404
         obj = qs.first()
         print(ClickEvent.objects.create_event(obj))
