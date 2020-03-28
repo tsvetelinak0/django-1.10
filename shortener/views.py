@@ -19,7 +19,7 @@ class HomeView(View):
         the_form = SubmitUrlForm()
         bg_image = 'https://static.pexels.com/photos/88212/pexels-photo-88212.jpeg'
         context = {
-            "title": "minim.com",
+            "title": "shredurl.com",
             "form": the_form,
             "bg_image": bg_image
         }
