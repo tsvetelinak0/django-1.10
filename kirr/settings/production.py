@@ -61,8 +61,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'kirr.urls'
 ROOT_HOSTCONF = 'kirr.hosts'
 DEFAULT_HOST = "www"
-DEFAULT_REDIRECT_URL = "http://www.minim.com" #minim.com
-PARENT_HOST = "minim.com"
+DEFAULT_REDIRECT_URL = "http://www.shredurl.com" #minim.com
+PARENT_HOST = "shredurl.com"
 
 TEMPLATES = [
     {
