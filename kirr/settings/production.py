@@ -27,7 +27,7 @@ SECRET_KEY = '2$^kkt3ez1l@xuaose^3xj4bk(9$6014is)+1ac9c*!io#ymt*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.herokuapp.com', 'shredurl.com', 'www.shredurl.com']
+ALLOWED_HOSTS = ['shredurl.herokuapp.com', 'shredurl.com', 'www.shredurl.com']
 
 
 # Application definition
