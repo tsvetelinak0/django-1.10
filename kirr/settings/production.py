@@ -27,7 +27,7 @@ SECRET_KEY = '2$^kkt3ez1l@xuaose^3xj4bk(9$6014is)+1ac9c*!io#ymt*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['shredurl.herokuapp.com', 'shredurl.com', 'www.shredurl.com']
+ALLOWED_HOSTS = ['hashedurl.herokuapp.com', 'hashedurl.com', 'www.hashedurl.com']
 
 
 # Application definition
@@ -64,8 +64,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'kirr.urls'
 ROOT_HOSTCONF = 'kirr.hosts'
 DEFAULT_HOST = "www"
-DEFAULT_REDIRECT_URL = "http://www.shredurl.com" #shredurl.com
-PARENT_HOST = "shredurl.com"
+DEFAULT_REDIRECT_URL = "http://www.hashedurl.com" #hashedurl.com
+PARENT_HOST = "hashedurl.com"
 
 TEMPLATES = [
     {
@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'kirr.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'shredurl',
+        'NAME': 'hashedurl',
         'USER': 'name',
         'PASSWORD': '',
         'HOST': 'localhost',

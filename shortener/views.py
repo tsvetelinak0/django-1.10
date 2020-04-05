@@ -19,7 +19,7 @@ class HomeView(View):
         the_form = SubmitUrlForm()
         bg_image = 'https://static.pexels.com/photos/88212/pexels-photo-88212.jpeg'
         context = {
-            "title": "shredurl.com",
+            "title": "hashedurl.com",
             "form": the_form,
             "bg_image": bg_image
         }
@@ -28,7 +28,7 @@ class HomeView(View):
     def post(self, request, *args, **kwargs):
         form = SubmitUrlForm(request.POST)
         context = {
-            "title": "shredurl.com",
+            "title": "hashedurl.com",
             "form": form
         }
         template = "shortener/home.html"
