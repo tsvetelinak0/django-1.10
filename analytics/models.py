@@ -14,7 +14,7 @@ class ClickEventManager(models.Manager):
         return None
 
 class ClickEvent(models.Model):
-    kirr_url  = models.OneToOneField(KirrURL)
+    kirr_url  = models.OneToOneField(KirrURL, null=True, on_delete=models.SET_NULL)
     count     = models.IntegerField(default=0)
     updated   = models.DateTimeField(auto_now=True)
     timestamp = models.DateTimeField(auto_now_add=True)

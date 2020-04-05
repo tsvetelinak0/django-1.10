@@ -1,7 +1,8 @@
-from django.db import models
 from django.conf import settings
-
+from django.db import models
+from django.utils.encoding import smart_text
 # from django.core.urlresolvers import reverse
+# from django.urls import reverse
 from django_hosts.resolvers import reverse
 # Create your models here.
 from .utils import code_generator, create_shortcode
@@ -25,8 +26,8 @@ class KirrURLManager(models.Manager):
             print(q.id)
             q.save()
             new_codes +=1
+        # return "New codes made: {i}".format(i=new_codes)
         return "New codes made: {i}".format(i=new_codes)
-
 class KirrURL(models.Model):
     url         = models.CharField(max_length=220, validators=[validate_url, validate_dot_com])
     shortcode   = models.CharField(max_length=SHORTCODE_MAX, unique=True, blank=True)
@@ -45,7 +46,14 @@ class KirrURL(models.Model):
         super(KirrURL, self).save(*args, **kwargs)
 
     def __str__(self):
-        return str(self.url)
+        '''
+        Added 'smart_text' function dor rendering issues within
+        Admin console.
+        '''
+        return smart_text(self.url)
+
+    def __unicode__(self):
+        return smart_text(self.url)
 
 
     def get_short_url(self):

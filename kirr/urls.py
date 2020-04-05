@@ -1,5 +1,6 @@
-from django.conf.urls import url
 from django.contrib import admin
+# from django.urls import re_path, path
+from django.conf.urls import url
 
 from shortener.views import HomeView, URLRedirectView
 
