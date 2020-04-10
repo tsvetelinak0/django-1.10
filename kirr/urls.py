@@ -1,12 +1,11 @@
 from django.contrib import admin
-# from django.urls import re_path, path
-from django.conf.urls import url
+from django.urls import re_path, path
 
 from shortener.views import HomeView, URLRedirectView
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', HomeView.as_view()),
-    url(r'^(?P<shortcode>[\w-]+)/$', URLRedirectView.as_view(), name='scode'),
+    path('admin/', admin.site.urls),
+    path('', HomeView.as_view()),
+    re_path(r'^(?P<shortcode>[\w-]+)/$', URLRedirectView.as_view(), name='scode'),
 ]
