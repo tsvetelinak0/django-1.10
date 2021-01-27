@@ -1,4 +1,5 @@
 kirr/settings/local.py
+kirr/old_settings.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -134,4 +135,5 @@ dmypy.json
 # Staticfiles
 staticfiles
 
+# Mac
 .DS_Store

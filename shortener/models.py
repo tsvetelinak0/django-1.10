@@ -1,7 +1,6 @@
 from django.conf import settings
 from django.db import models
 from django.utils.encoding import smart_text
-# from django.core.urlresolvers import reverse
 # from django.urls import reverse
 from django_hosts.resolvers import reverse
 # Create your models here.
@@ -47,7 +46,7 @@ class KirrURL(models.Model):
 
     def __str__(self):
         '''
-        Added 'smart_text' function dor rendering issues within
+        Added 'smart_text' function for rendering issues within
         Admin console.
         '''
         return smart_text(self.url)
