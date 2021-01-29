@@ -7,12 +7,12 @@ class SubmitUrlForm(forms.Form):
     url = forms.CharField(
             label='',
             validators=[validate_url],
-            widget = forms.TextInput(
-                    attrs = {
-                        "placeholder": "Long URL",
-                        "class": "form-control"
-                        }
-                )
+            # widget = forms.TextInput(
+            #         attrs = {
+            #             "placeholder": "Shorten that URL",
+            #             "class": "form-control"
+            #             }
+            #     )
             )
 
     # def clean(self):

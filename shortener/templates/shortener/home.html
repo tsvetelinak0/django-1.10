@@ -1,40 +1,20 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block styles %}
-<!--  try to move next lines in static/shortener/style.css -->
-<style>
-body {
-  background-color: #40E0D0;
-  {% if bg_image %}
-      background-image: url({{ bg_image }});
-  {% endif %}
-      background-size: cover;
-}
-
-.btn-link {
-  color: blue;
-  text-shadow: none;
-}
-
-.btn.link:hover {
-  color: #000000;
-}
-
-</style>
-{% endblock styles %}
-
 
 {% block content %}
 <h1 class="cover-heading">{{ title }}</h1>
-  <p class='lead'>Shorten that URL</p>
   <p class="lead">
     <div class='col-sm-6 col-sm-offset-3'>
       <form method='POST' action='.'> {% csrf_token %}
+        <input type="text" placeholder='Shorten that URL'>
+        <!-- <input type="submit">Submit &raquo -->
+        <input type="submit" value="Submit &raquo">
+
         <!-- <input name='url' type='text' placeholder='Shorten your URL like http://www.
         codingforentrepreneurs.com'/> -->
-        {{ form.as_p }}
-        <input class='btn btn-primary' type='submit' value='Shorten &raquo;' >
+        <!-- {{ form.as_p }} -->
+        <!-- <input class='btn btn-primary' type='submit' placeholder='Shorten that URL &raquo;' > -->
       </form>
     </div>
   </p>

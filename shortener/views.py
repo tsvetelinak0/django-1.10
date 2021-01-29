@@ -17,11 +17,9 @@ def home_view_fbv(request, *args, **kwargs):
 class HomeView(View):
     def get(self, request, *args, **kwargs):
         the_form = SubmitUrlForm()
-        bg_image = 'https://static.pexels.com/photos/88212/pexels-photo-88212.jpeg'
         context = {
             "title": "hashedurl.com",
-            "form": the_form,
-            "bg_image": bg_image
+            "form": the_form
         }
         return render(request, "shortener/home.html", context)
 
